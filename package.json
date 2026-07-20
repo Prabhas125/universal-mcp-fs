@@ -1,0 +1,62 @@
+{
+  "name": "universal-mcp-fs",
+  "version": "1.0.0",
+  "description": "Local MCP server that gives AI assistants (Claude Desktop and other stdio-compatible MCP clients) filesystem access and command execution on your machine, with elicitation-based approval for dangerous operations.",
+  "type": "module",
+  "bin": {
+    "universal-mcp-fs": "./dist/index.js",
+    "universal-mcp-fs-setup": "./dist/setup.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "config",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PRABHAS125/universal-mcp-fs.git"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "filesystem",
+    "claude",
+    "claude-desktop",
+    "model-context-protocol",
+    "ai-tools",
+    "ai-filesystem",
+    "local-mcp"
+  ],
+  "homepage": "https://github.com/PRABHAS125/universal-mcp-fs#readme",
+  "bugs": {
+    "url": "https://github.com/PRABHAS125/universal-mcp-fs/issues"
+  },
+  "author": "Prabhas",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "zod": "^3.24.0",
+    "glob": "^11.0.0",
+    "minimatch": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

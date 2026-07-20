@@ -1,0 +1,16 @@
+{
+  "maxFileSizeBytes": 10485760,
+  "enableCommands": true,
+  "enableDelete": true,
+  "commandTimeoutMs": 30000,
+  "elicitationTimeoutMs": 120000,
+  "maxSearchResults": 50,
+  "blockedPathPatterns": [
+    "**/.ssh/**",
+    "**/.aws/**",
+    "**/.gnupg/**",
+    "**/Login Data",
+    "**/logins.json",
+    "**/Credentials/**"
+  ]
+}
